@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<style>
+
+.child {
+  background: orange;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+}
+</style>
+</head>
+<body>
+
+<div class="child">This div is centered vertically and horizontally.</div>
+
+</body>
+</html>
