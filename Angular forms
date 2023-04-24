@@ -1,0 +1,30 @@
+//Setup in reactive forms
+//While using formControl, you have to import ReactiveFormsModule to your imports array
+import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+
+@Component({
+  selector: 'app-reactive-favorite-color',
+  template: `
+    Favorite Color: <input type="text" [formControl]="favoriteColorControl">
+  `
+})
+export class FavoriteColorComponent {
+  favoriteColorControl = new FormControl('');
+}
+
+
+
+//Setup in template-driven forms
+//FormsModule
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-template-favorite-color',
+  template: `
+    Favorite Color: <input type="text" [(ngModel)]="favoriteColor">
+  `
+})
+export class FavoriteColorComponent {
+  favoriteColor = '';
+}
