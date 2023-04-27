@@ -1,0 +1,48 @@
+// HTML
+<div class="header center">
+  Header
+</div>
+<div class="side-nav center">
+  Side Nav
+</div>
+<div class="content center">
+  <span>
+    Content1
+  </span>
+</div>
+<div class="footer center">
+Footer
+</div>
+
+
+//CSS
+.center { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header {
+  height: 20px;
+  width: 100%;
+  border: 1px solid black;
+}
+.side-nav {
+  height: 80px;
+  width: 20%;
+  border: 1px solid black;
+  float: left;
+  box-sizing: border-box;
+}
+.content {
+  height: 80px;
+  width: 80%;
+  border: 1px solid black;
+  float: right;
+  box-sizing: border-box;
+}
+.footer {
+  height: 20px;
+  width: 100%;
+  border: 1px solid black;
+  bottom: 0px;
+}
