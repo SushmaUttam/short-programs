@@ -1,22 +1,23 @@
-// Find a pair which sums up to 8
+// Find a pair which sums up to 8 with sorted array
 const arr = [1, 2, 3, 9, 10];
 /* const arr = [1, 2, 4, 4]; */
 const sum = 8;
-let flag = false;
 const len = arr.length;
 let low = 0; high = len-1;
-const mid = Math.floor(5/2);
-while (low < mid && high >= mid) {
-  if (arr[low] + arr[high] < sum) {
+while (low < high) {
+	let s = arr[low] + arr[high];
+  if (s < sum) {
     low++;
-  } else if (arr[low] + arr[high] > sum) {
+  } else if (s > sum) {
     high--;
-  } else if (arr[low] + arr[high] == sum) {
+  } else if (s == sum) {
     break;
   }
 }
-if (low == mid && high == mid) {
+if (low == high) {
   console.log("No pair found which will sum up to 8")
 } else {
   console.log("Pair summing up to 8: ", arr[low], arr[high])
 }
+
+//unsorted array
