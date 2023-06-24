@@ -1,0 +1,26 @@
+//Given an array of distinct integers. Count all the triplets such that sum of two elements equals the third element.
+
+// const N = 4,
+// arr = [1, 5, 3, 2];
+// Output: 2
+const N = 7;
+let arr = [12, 8, 2, 11, 5, 14, 10];
+// Output: 3
+arr = arr.sort((a, b) => a - b);
+let counter = 0, sum;
+for (let i = N - 1; i >= 0; i--) {
+  let p1 = 0, p2 = i - 1;
+  while (p1 < p2) {
+    sum = arr[p1] + arr[p2];
+    if (sum == arr[i]) {
+      counter++;
+      p1++;
+      p2--;
+    } else if (sum < arr[i]) {
+      p1++;
+    } else if (sum > arr[i]) {
+      p2--;
+    }
+  }
+}
+console.log(counter)
