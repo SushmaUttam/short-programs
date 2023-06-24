@@ -1,0 +1,24 @@
+/* Find the length of the sequence which has max 0s */
+/* var str = '11111'; */
+var str = '1100011010000';
+var counter = 0;
+var len = str.length;
+var max = 0;
+
+if (str.includes('0')) {
+  for (var i = 0; i < len; i++) {
+    if (str[i] == '0') {
+      counter++;
+    } else {
+      if (counter > max) {
+        max = counter;
+      }
+      counter = 0;
+    }
+  }
+  if (counter > max) {
+    max = counter;
+  }
+
+}
+console.log(max)
