@@ -1,0 +1,17 @@
+//Given two sorted arrays arr1[] and arr2[] of sizes n and m in non-decreasing order.
+//Merge them in sorted order without using any extra space.
+//Modify arr1 so that it contains the first N elements and modify arr2 so that it contains the last M elements.
+
+const n = 4, m = 5;
+let arr1 = [1, 3, 5, 7], arr2 = [0, 2, 6, 8, 9];
+// Output: 
+// arr1[] = [0 1 2 3]
+// arr2[] = [5 6 7 8 9]
+
+arr1 = [...arr1, ...arr2];
+arr1.sort((a, b) => a-b);
+let temp = arr1;
+arr1 = temp.slice(0, n);
+arr2 = temp.slice(n);
+
+console.log(arr1, arr2)
