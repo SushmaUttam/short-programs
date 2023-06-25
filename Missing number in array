@@ -1,0 +1,27 @@
+//Given an array of size N-1 such that it only contains distinct integers in the range of 1 to N.
+//Find the missing element.
+// const N = 5,
+// A = [1,2,4,5];
+// Output: 4
+
+const N = 10,
+A = [6, 1, 2, 8, 3, 4, 7, 10, 5];
+// Output: 9
+//Bit Manipulation, used XOR here
+// let res = A[0];;
+// for (let i=1; i<=N; i++) {
+//   if (A[i]) {
+//     res = res ^ A[i] ^ i;
+//   } else {
+//     res = res ^ i;
+//   }
+// }
+
+//OR
+
+let res, sum = 0;
+for (let i=0; i<N-1; i++) {
+  sum = sum + A[i];
+}
+res = ( (N * (N+1)) / 2 ) - sum;
+console.log(res)
